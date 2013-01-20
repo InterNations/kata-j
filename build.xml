@@ -86,7 +86,7 @@
         <delete dir="${artifacts.temp.dir}"/>
     </target>
 
-    <target name="tests">
+    <target name="tests" depends="build.modules">
         <junit printsummary="yes" haltonfailure="yes" haltonerror="yes" showoutput="yes">
             <formatter type="plain" usefile="false"/>
             <classpath refid="tests.classpath"/>
@@ -98,5 +98,7 @@
         </junit>
     </target>
 
-    <target name="all" depends="build.modules, build.all.artifacts, tests" description="build all"/>
+    <target name="kata" depends="build.modules, build.all.artifacts" description="build kata JAR"/>
+
+    <target name="all" depends="kata, tests" description="build all"/>
 </project>
