@@ -1,8 +1,8 @@
 package kata;
 
 public class Calculator {
-    public Integer add(Integer left, Integer right)
-    {
-        return left + right;
+    @SuppressWarnings("unchecked")
+    public <T extends Number> float add(T a, T b) {
+        return ((Number) a).floatValue() + ((Number) b).floatValue();
     }
 }

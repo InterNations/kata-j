@@ -14,6 +14,10 @@ public class CalculatorTest {
     }
 
     @Test public void addIntegers() {
-        assertSame(3, calculator.add(1, 2));
+        assertEquals(new Float(3.0), calculator.add(1, 2));
+    }
+
+    @Test public void addLongs() {
+        assertEquals(new Float(3.0), calculator.add(new Long(1), new Long(2)));
     }
 }
