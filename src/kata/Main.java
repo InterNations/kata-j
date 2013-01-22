@@ -6,6 +6,6 @@ public class Main {
 
         Calculator calculator = new Calculator();
 
-	    System.out.format("Hello World. 1+2=%d\n", calculator.add(1, 2));
+	    System.out.format("Hello World. 1+2=%f\n", calculator.add(1, 2));
     }
 }
